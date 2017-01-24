@@ -5,16 +5,15 @@ var $ = require('jQuery')
 var Nav = (props) => {
 	return (
 		<div>
-			<select className = 'waves-effect waves-light btn-large'>
-	 			<option> Express </option>
-	 			<option> Mongo </option>
-	 			<option> React </option>
+			<select value = {optionsState} className = 'waves-effect waves-light btn-large'>
+	 			<option value = 'A'> Express </option>
+	 			<option value = 'B'> Mongo </option>
+	 			<option value = 'C'> React </option>
 	 		</select>
 
-
-	 			<input type='text' placeholder='Search'/>
-	 			<button className = "waves-effect waves-light btn-large" type="text" onClick={(e)=>{
-	 				return props.search($('input').val())}}>submit</button>
+	 			<input type='text' value = {inputText} placeholder='Search'/>
+	 			<button className = "waves-effect waves-light btn-large" type="text" onClick={()=>{
+	 				return props.search({optionsState, inputText})}}>submit</button>
 
 
 	 	</div>

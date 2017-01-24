@@ -21,8 +21,8 @@ class App extends React.Component {
 		//this.componentDidMount = this.componentDidMount.bind(this);
 	}
 
-	search(event) {
-		console.log('printing out searched event', event);
+	search(event, stuff) {
+		console.log('printing out searched event', event + stuff);
 		queryData({query: event});
 		// this.setState({searched: event})
 	}
